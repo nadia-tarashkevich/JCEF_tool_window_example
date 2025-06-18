@@ -11,5 +11,11 @@
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="org.jetbrains.plugins.template.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
         <postStartupActivity implementation="org.jetbrains.plugins.template.startup.MyProjectActivity" />
+        <advancedSetting default="false" id="my.setting.id"
+                     service="org.jetbrains.plugins.template.services.MyService"
+                     property="myProperty"/>
+        <applicationService
+            serviceInterface="org.jetbrains.plugins.template.services.MyService"
+            serviceImplementation="org.jetbrains.plugins.template.services.MyServiceImpl"/>
     </extensions>
 </idea-plugin>
